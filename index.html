@@ -93,6 +93,12 @@
 
     <!-- Style css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -153,7 +159,6 @@
                 method="post"
                 autocomplete="off"
                 class="email-form"
-                required
               >
                 <input
                   type="email"
@@ -161,6 +166,7 @@
                   id="email"
                   placeholder="Your email address"
                   class="email-form__input"
+                  required
                 />
                 <button type="submit" class="email-form__submit">
                   <p class="button-submit__link">Get Started</p>
@@ -176,12 +182,12 @@
                 alt="Digital Smart Wallet"
                 class="hero__media-img"
               />
-              <div class="hero__interest">
+              <div class="hero__interest" data-aos="animate__bounceInRight">
                 <p class="hero__interest-number">0%</p>
                 <p class="hero__interest-inner">Interest</p>
               </div>
 
-              <div class="hero__deposite">
+              <div class="hero__deposite" data-aos="animate__backInLeft">
                 <svg
                   width="20"
                   height="20"
@@ -206,7 +212,7 @@
                 <p class="hero__deposite-price">$32000</p>
               </div>
 
-              <div class="hero__security">
+              <div class="hero__security" data-aos="animate__backInUp">
                 <div class="hero__security-inner">
                   <svg
                     width="20"
@@ -239,7 +245,7 @@
       <section class="works">
         <div class="container">
           <div class="works-inner">
-            <figure class="works__media">
+            <figure class="works__media" data-aos="animate__backInLeft">
               <div class="works__media-img-wrap">
                 <img
                   src="./assets/image/works-img.png"
@@ -318,7 +324,7 @@
                 alt="Bank card"
                 class="payment__media-img"
               />
-              <div class="payment__income">
+              <div class="payment__income" data-aos="animate__bounceInRight">
                 <div class="payment__income-inner">
                   <img
                     src="./assets/icon/payments-income.svg"
@@ -329,7 +335,7 @@
                   <p class="income__price">$1250</p>
                 </div>
               </div>
-              <div class="payment__money">
+              <div class="payment__money" data-aos="animate__bounceInRight">
                 <img
                   src="./assets/icon/payments-send.svg"
                   alt=""
@@ -357,8 +363,12 @@
                 src="./assets/image/transfer-img.png"
                 alt="Allow many of payment method"
                 class="transfers__media-img"
+                data-aos="animate__backInLeft"
               />
-              <section class="transfers__media-payment">
+              <section
+                class="transfers__media-payment"
+                data-aos="animate__fadeIn"
+              >
                 <div class="payment-inner">
                   <p class="payment-heading">Choose payment method:</p>
                   <div class="payment-grid">
@@ -458,7 +468,7 @@
           <div class="testimonial-bottom">
             <div class="testimonial-page">
               <article class="testimonial-user">
-                <div class="user-feedback">
+                <div class="user-feedback" data-aos="animate__backInLeft">
                   <blockquote class="user-quote">
                     Fantastic platform for online banking. The best online
                     banking platform I have used. Payments, loans, and money
@@ -480,7 +490,7 @@
               </article>
 
               <article class="testimonial-user">
-                <div class="user-feedback">
+                <div class="user-feedback" data-aos="animate__backInRight">
                   <blockquote class="user-quote">
                     Fantastic platform for online banking. The best online
                     banking platform I have used. Payments, loans, and money
@@ -644,16 +654,20 @@
             </p>
 
             <figure class="app-social">
-              <img
-                src="./assets/icon/app-ggplay.svg"
-                alt="GG play"
-                class="app-down"
-              />
-              <img
-                src="./assets/icon/app-appstore.svg"
-                alt="App play"
-                class="app-down"
-              />
+              <a href="#!">
+                <img
+                  src="./assets/icon/app-ggplay.svg"
+                  alt="GG play"
+                  class="app-down"
+                />
+              </a>
+              <a href="#!">
+                <img
+                  src="./assets/icon/app-appstore.svg"
+                  alt="App play"
+                  class="app-down"
+                />
+              </a>
             </figure>
 
             <div class="app-deco">
@@ -770,5 +784,14 @@
         <p class="footer-copyright">© 2020 Ligft Media All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        useClassNames: true,
+        initClassName: null,
+        animatedClassName: "animate__animated",
+      });
+    </script>
   </body>
 </html>

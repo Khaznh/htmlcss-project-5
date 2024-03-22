@@ -1076,8 +1076,14 @@ a {
   gap: 16px;
 }
 
+.app .app-down:hover {
+  opacity: 0.9;
+}
+
 .app-deco__img {
   position: absolute;
+
+  animation: updown 2s infinite linear;
 }
 
 .app-deco__img:first-child {
@@ -1224,4 +1230,16 @@ a {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75; /* 175% */
+}
+
+@keyframes updown {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
 }
