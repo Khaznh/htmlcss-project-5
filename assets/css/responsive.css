@@ -453,8 +453,16 @@
   .btn.blog-top {
     --height: 30px;
     font-size: 1rem;
-    padding: 0 10px;
+  }
+
+  .transfer-btn,
+  .btn.blog-top {
     width: 26%;
+  }
+
+  .btn.blog-top,
+  .transfer-btn {
+    padding: 0 10px;
   }
 
   .payment__media-img {
@@ -645,5 +653,46 @@
 
   .use-avata {
     margin-top: 12px;
+  }
+
+  .blog {
+    padding: 40px 0 40px;
+  }
+
+  .footer__inner-top {
+    padding: 54px 0 54px;
+  }
+
+  .testimonial {
+    padding: 40px 0;
+  }
+
+  .transfers {
+    padding: 40px 0;
+  }
+
+  .transfers__media {
+    margin-right: 50%;
+  }
+
+  .payments-btn,
+  .transfer-btn {
+    width: 76px;
+  }
+
+  .payments-btn {
+    padding: 0 10px;
+  }
+
+  .btn.blog-top {
+    padding: 0 15px;
+  }
+
+  .blog__item-heading {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+  }
+
+  .footer__inner-top {
   }
 }
