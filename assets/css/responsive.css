@@ -453,6 +453,7 @@
   .btn.blog-top {
     --height: 30px;
     font-size: 1rem;
+    text-align: center;
   }
 
   .transfer-btn,
