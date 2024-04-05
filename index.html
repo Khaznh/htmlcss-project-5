@@ -94,10 +94,22 @@
     <!-- Style css -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
+    <!-- Responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
     <!-- Animation -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -105,8 +117,31 @@
     <header class="header fixed">
       <div class="container">
         <div class="header__inner">
+          <!-- Icon -->
+          <div class="tablet-mobile__menu">
+            <input
+              hidden
+              type="checkbox"
+              name="hide-menu"
+              id="hide-menu"
+              class="hide-menu"
+            />
+            <label for="hide-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </label>
+            <label for="hide-menu" class="menu-overlay"></label>
+            <div class="menu-drawer">
+              <ul id="sub-menu"></ul>
+            </div>
+          </div>
+
           <!-- Logo -->
-          <a href="#">
+          <a href="#" class="logo-link">
             <img
               src="./assets/image/Logo.svg"
               alt="Celobank - Digital Payment For Everyone."
@@ -115,7 +150,15 @@
           </a>
           <!-- Navbar -->
           <nav class="header__navbar">
-            <ul class="header__navbar-list">
+            <ul class="header__navbar-list" id="main-menu">
+              <li class="header__navbar-list show-mobile show-tablet">
+                <a href="#!" class="header__navbar-link">
+                  <img
+                    src="./assets/image/Logo.svg"
+                    alt="Celobank - Digital Payment For Everyone."
+                    class="header__inner-logo"
+                /></a>
+              </li>
               <li class="header__navbar-list">
                 <a href="#!" class="header__navbar-link active">Home</a>
               </li>
@@ -127,6 +170,12 @@
               </li>
               <li class="header__navbar-list">
                 <a href="#!" class="header__navbar-link">Blog</a>
+              </li>
+              <li class="header__navbar-list show-mobile">
+                <a href="#!" class="header__navbar-link">Sign in</a>
+              </li>
+              <li class="header__navbar-list show-mobile">
+                <a href="#!" class="header__navbar-link">Sign up</a>
               </li>
             </ul>
           </nav>
@@ -316,7 +365,9 @@
                 <li class="payments-item"><span>Friendly Price</span></li>
               </ul>
 
-              <a href="#!" class="btn payments-btn">Get Started</a>
+              <div class="respon-center">
+                <a href="#!" class="btn payments-btn">Get Started</a>
+              </div>
             </section>
             <figure class="payments__media">
               <img
@@ -446,7 +497,9 @@
                 </li>
               </ul>
 
-              <a href="#!" class="btn transfer-btn">Get Started</a>
+              <div class="respon-center">
+                <a href="#!" class="btn transfer-btn">Get Started</a>
+              </div>
             </section>
           </div>
         </div>
@@ -793,7 +846,14 @@
         useClassNames: true,
         initClassName: null,
         animatedClassName: "animate__animated",
+        once: true,
+        mirror: true,
       });
+
+      const subMenu = document.querySelector("#sub-menu");
+      const mainMenu = document.querySelector("#main-menu");
+
+      subMenu.innerHTML = mainMenu.innerHTML;
     </script>
   </body>
 </html>
