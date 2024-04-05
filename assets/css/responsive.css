@@ -677,6 +677,7 @@
 
   .payments-btn,
   .transfer-btn {
+    text-align: center;
     width: 76px;
   }
 
@@ -686,6 +687,7 @@
 
   .btn.blog-top {
     padding: 0 15px;
+    text-align: center;
   }
 
   .blog__item-heading {
